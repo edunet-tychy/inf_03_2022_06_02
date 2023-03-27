@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stacja paliw</title>
+    <link rel="stylesheet" href="./styl2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Całodobowa stacja paliw</h1>
+      </header>
+      <menu class="menu">
+        <a href="./stacja.html"><img src="./home.png" alt="home" /></a>
+        <a href="./obliczenia.html"><img src="./znak.png" alt="znak" /></a>
+        <a href="./kwerendy.txt">Pobierz dokument</a>
+      </menu>
+      <div class="form">
+        <section class="left">
+          <h3>Orientacyjny koszt paliwa</h3>
+          <div class="box">
+            <label for="fuel">Rodzaj paliwa (1-benzyna, 2-olejna napędowy)</label><br />
+            <input type="number" name="fuel" id="fuel" min="1" max="2" /><br />
+            <label for="quantity">Ile litrów?</label><br />
+            <input type="number" name="quantity" id="quantity" min="1" />
+          </div>
+          <input type="button" value="OBLICZ" class="btn" id="btn" />
+          <p class="result" id="result">Koszt paliwa</p>
+        </section>
+        <section class="right">
+          <img src="./samochod.png" alt="samochód" />
+        </section>
+      </div>
+      <footer class="footer">
+        <p>Stronę opracował: 00000000000</p>
+      </footer>
+    </div>
+
+    <!-- Skrypt JS -->
+    <script>
+      const btn = document.getElementById("btn");
+
+      btn.addEventListener("click", () => {
+        const result = document.getElementById("result");
+        let fuel = document.getElementById("fuel").value;
+        let quantity = document.getElementById("quantity").value;
+        result.style.opacity = 1;
+
+        fuel === "" ? (fuel = 0) : fuel;
+        quantity === "" ? (quantity = 0) : quantity;
+
+        if (parseInt(fuel) === 1) {
+          result.innerText = `koszt paliwa: ${4 * parseInt(quantity)} zł`;
+        } else if (parseInt(fuel) === 2) {
+          result.innerText = `koszt paliwa: ${3.5 * parseInt(quantity)} zł`;
+        } else {
+          result.innerText = `koszt paliwa: ${0 * parseInt(quantity)} zł`;
+        }
+      });
+    </script>
+  </body>
+</html>

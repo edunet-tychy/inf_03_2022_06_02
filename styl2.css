@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header,
+.footer {
+  width: 90%;
+  background: rgb(120, 0, 46);
+  color: #fff;
+  padding: 5px;
+  font-size: 150%;
+  text-align: center;
+}
+
+.menu {
+  width: 90%;
+  background: rgb(173, 20, 87);
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.menu a {
+  padding: 0 50px;
+  color: OliveDrab;
+}
+
+.form {
+  width: 90%;
+  display: flex;
+}
+
+.left {
+  background-color: snow;
+  color: OliveDrab;
+  width: 60%;
+  height: 322px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left table {
+  margin: 20px 0;
+  width: 90%;
+  border: 1px solid OliveDrab;
+}
+
+.left table td {
+  border: 1px solid OliveDrab;
+}
+
+.right {
+  background: rgb(173, 20, 87);
+  width: 40%;
+  height: 322px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right img {
+  border: 1px dotted rgb(173, 20, 87);
+  margin: 40px;
+  padding: 10px;
+}
+
+.right img:hover {
+  border: 1px dotted yellowgreen;
+}
+
+.box {
+  text-align: left;
+  margin: 20px;
+}
+
+.btn {
+  padding: 5px 10px;
+}
+
+.result {
+  padding: 10px;
+  opacity: 0;
+}
+
+input[type="number"] {
+  width: 100px;
+  padding: 2px;
+}
